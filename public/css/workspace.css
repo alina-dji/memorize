@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  padding: 1%;
+  /* background-color: #f8f7ee; */
+  background-color: #f7f6f3;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.profil {
+  display: flex;
+}
+
+.profil .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #babab6;
+  color: #f8f7ee;
+}
+
+.profil .name {
+  display: flex;
+  align-self: center;
+  margin: 0 0 0 5%;
+  color: rgb(65, 65, 65);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.all-pages {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-pages a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #838383;
+  font-size: 0.9rem;
+}
+
+.new-page {
+  cursor: pointer;
+  margin: 0 0 10% 0;
+  text-decoration: none;
+  color: #838383;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.new-page span {
+  margin: 0 0 0 2%;
+}
+
+.logout {
+  display: flex;
+  text-decoration: none;
+}
+
+.logout i {
+  color: #babab6;
+  font-size: 1.5rem;
+}
+
+.logout span {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-self: center;
+  margin: 0 0 0 5%;
+  color: rgb(65, 65, 65);
+}
+
+/*********** SCROLL BAR CSS ***********/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(215, 215, 215);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(180, 180, 180);
+}
+
+.current-page {
+  width: 80%;
+  padding: 1%;
+}
+
+.new-question {
+  cursor: pointer;
+  color: #babab6;
+  position: absolute;
+  left: 96%;
+}
+
+.delete-page {
+  cursor: pointer;
+  color: #babab6;
+  font-size: 0.9rem;
+  position: absolute;
+  left: 98%;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  color: #babab6;
+  font-size: 0.9rem;
+}
+
+select option {
+  font-size: 0.9rem;
+}
+
+.selected-priority {
+  color: #babab6;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.page-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 3% 0 0 0;
+}
+
+.title {
+  color: rgb(65, 65, 65);
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 0 0 3.5% 0;
+  cursor: text;
+}
+
+textarea {
+  color: rgb(65, 65, 65);
+  resize: none;
+  overflow: hidden;
+  border: none;
+}
+
+textarea.add-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+textarea.write-question {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+textarea.write-answer {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+::placeholder {
+  color: #ddddda;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+.write-question-answer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(186, 186, 182, 0.5);
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.fa-check-square {
+  display: flex;
+  align-self: flex-end;
+  color: #babab6;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.questions-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.questions-list li {
+  margin: 1.5% 0 0 0;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(65, 65, 65);
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.delete-question {
+  color: #babab6;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.edit-question {
+  color: #babab6;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.edit-delete-question {
+  display: flex;
+  width: 3.5%;
+  justify-content: space-between;
+}
+
+.qst {
+  width: 95%;
+}
+
+.answer {
+  color: rgb(121, 121, 121);
+  font-size: 0.9rem;
+  margin: 1% 0 0 0;
+}

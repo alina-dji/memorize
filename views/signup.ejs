@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/signup-login.css">
+    <%-include('./partials/favicon.ejs')%>
+    <title>Memorize - Sign up</title>
+</head>
+<body>
+    <%-include('./partials/header.ejs')%>
+    <img src="/images/signup-illustration.png" alt="" class="illustration">
+    <main>
+        <form>
+            <h1>Sign up</h1>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <div class="name error"></div>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="email error"></div>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="password error"></div>
+            </div>
+            <button>Create an account</button>
+        </form>
+    </main>
+
+    <script src="/javascript/signupScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<div class="sidebar">
+
+    <div class="profil">
+        <div class="icon">
+            <span><%= user.name[0].toUpperCase() %></span>
+        </div>
+        <div class="name">
+            <%= user.name  %>
+        </div>
+    </div>
+
+    <div class="all-pages">
+        <div class="new-page" data-doc="/workspace/<%= user._id%>">
+            <i class="fa fa-plus"></i>
+            <span>New page</span>
+        </div>
+        <%  user.pages.forEach((page) => { %> 
+            <a href="/workspace/<%= user._id + '/' + page._id %>">
+                <i class="fa fa-caret-right"></i>
+                <span><%= page.title %></span>
+            </a>
+        <% }) %> 
+    </div>
+    
+    <a class="logout" href="/logout">
+        <i class="fa fa-sign-out-alt"></i>
+        <span>Log out</span>
+    </a>
+    
+</div>

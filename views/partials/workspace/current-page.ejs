@@ -1,0 +1,64 @@
+<div class="current-page">
+
+    <i class="fas fa-plus new-question" title="add question"></i>
+    <% if (user.pages.length === 1) { %>
+         <!-- the delete button is disabled when there's only one page -->
+         <i class="fa fa-trash delete-page" title="delete page"></i>
+    <% } else { %>
+         <i class="fa fa-trash delete-page" title="delete page" data-endpoint="/workspace/<%= user._id + '/' + page._id %>"></i>
+    <% } %>
+    
+
+    <% if (page.priority!="unset") { %> 
+        <div class="selected-priority" title="click to change">
+            <%= page.priority + ' priority' %>
+        </div>
+    <% } else { %>
+        <select name="priority" id="priority" data-endpoint="/workspace/<%= user._id + '/' + page._id + '/setpriority'%>">
+            <option value="unset" id="unset">set priority</option>
+            <option value="high" id="high">high</option>
+            <option value="medium" id="medium">medium</option>
+            <option value="low" id="low">low</option>
+        </select> 
+    <% } %> 
+    <!-- TODO: this has to change-->
+    <select style="display: none;" name="priority" id="priority" data-endpoint="/workspace/<%= user._id + '/' + page._id + '/setpriority'%>">
+        <option value="unset" id="unset">set priority</option>
+        <option value="high" id="high">high</option>
+        <option value="medium" id="medium">medium</option>
+        <option value="low" id="low">low</option>
+    </select>
+
+    <div class="page-title">
+        <% if (page.title) { %> 
+            <textarea style="display: none;" placeholder="Title" name="title" class="add-title" data-endpoint="/workspace/<%= user._id + '/' + page._id + '/addtitle'%>"></textarea>
+            <h1 class="title"><%= page.title %></h1>
+        <% } else { %> 
+            <textarea placeholder="Title" name="title" class="add-title" data-endpoint="/workspace/<%= user._id + '/' + page._id + '/addtitle'%>"></textarea>
+        <% } %>
+    </div>
+    
+    <form class="write-question-answer" style="display: none;"> 
+        <textarea placeholder="Question" name="question" class="write-question"></textarea>
+        <textarea placeholder="Answer" name="answer" class="write-answer"></textarea>
+        <i class="fas fa-check-square add-question" data-endpoint="/workspace/<%= user._id + '/' + page._id %>"></i>
+    </form>
+
+    <ul class="questions-list">
+       <% for (let i=0; i<page.questions.length; i++) { %>
+            <li>
+                <div class="question">
+                    <div class="qst"><%= '◾ ' + page.questions[i] %></div>
+                    <div style="display: none;" class="edit-delete-question">
+                        <i class="fa fa-edit edit-question" data-endpoint="/workspace/<%= user._id + '/' + page._id + '/' + i %>"></i>     
+                        <i class="fa fa-trash delete-question" data-endpoint="/workspace/<%= user._id + '/' + page._id + '/' + i %>"></i> 
+                    </div>     
+                </div>
+                <div style="display: none;" class="answer">
+                    <%= page.answers[i] %> 
+                </div>
+            </li>
+        <% } %> 
+    </ul>   
+
+</div>

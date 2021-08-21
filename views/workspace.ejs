@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/workspace.css">
+    <script src="https://kit.fontawesome.com/df763017bd.js" crossorigin="anonymous"></script>
+    <%-include('./partials/favicon.ejs')%>
+    <title>Memorize</title>
+</head>
+<body>
+    <%-include('./partials/workspace/sidebar.ejs')%>
+    <%-include('./partials/workspace/current-page.ejs')%>
+
+    <script src="/javascript/workspaceScripts/deletePage.js"></script>
+    <script src="/javascript/workspaceScripts/newPage.js"></script>
+    <script src="/javascript/workspaceScripts/addDeleteEditQuestion.js"></script>
+    <script src="/javascript/workspaceScripts/addUpdateTitle.js"></script>
+    <script src="/javascript/workspaceScripts/autoresizeTextarea.js"></script>
+    <script src="/javascript/workspaceScripts/showHideAnswers.js"></script>
+    <script src="/javascript/workspaceScripts/setPriority.js"></script>
+</body>
+</html>

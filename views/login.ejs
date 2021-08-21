@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/signup-login.css">
+    <%-include('./partials/favicon.ejs')%>
+    <title>Memorize - Log in</title>
+</head>
+<body>
+    <%-include('./partials/header.ejs')%>
+    <main>
+        <img src="/images/login-illustration.png" alt="" class="illustration">
+        <form>
+            <h1>Log in</h1>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="email error"></div>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="password error"></div>
+            </div>
+            <button>Let's start!</button>
+        </form>
+    </main>
+
+    <script src="/javascript/loginScript.js"></script>
+</body>
+</html>
