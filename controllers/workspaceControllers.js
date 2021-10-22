@@ -122,10 +122,10 @@ function sendEmails (user, page) {
         schedule.scheduleJob(date, () => {
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
-                    console.log('error sending email',error);
+                    console.log('error sending email', error);
                 }
                 else {
-                    console.log('email sent',info);
+                    console.log('email sent', info);
                 }
             });
         });
@@ -138,10 +138,10 @@ function sendEmails (user, page) {
         schedule.scheduleJob(date, () => {
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
-                    console.log('error sending email',error);
+                    console.log('error sending email', error);
                 }
                 else {
-                    console.log('email sent',info);
+                    console.log('email sent', info);
                 }
             });
         });
