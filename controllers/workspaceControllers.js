@@ -106,10 +106,10 @@ function sendEmails (user, page) {
         schedule.scheduleJob(date, () => {
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
-                    console.log('error sending email',error);
+                    console.log('error sending email', error);
                 }
                 else {
-                    console.log('email sent',info);
+                    console.log('email sent', info);
                 }
             });
         });
@@ -204,7 +204,7 @@ async function setPriority (req, res) {
                 console.log(err);
             }
         });
-        // sendEmails(user, page);    
+        sendEmails(user, page);    
         res.status(200).json({userId, pageId});
     } 
     catch (err) {
